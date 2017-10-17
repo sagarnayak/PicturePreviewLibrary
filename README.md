@@ -29,10 +29,9 @@ To add this to your project follow the steps below.
      4. Actionbar Title in picture preview (Optional)
       
             ArrayList<AdapterDataPojo> adapterDataPojos = new ArrayList<>();
-	    
             adapterDataPojos.add(new AdapterDataPojo("https://une.jpg", "Pic details"));
             adapterDataPojos.add(new AdapterDataPojo("https://imgate.jpg", "Pic details"));
-	    new PicturePreview(MainActivity.this, adapterDataPojos);
+            new PicturePreview(MainActivity.this, adapterDataPojos);
 	    
 4. after initializing the data to the PicturePreview class call the start() to start the library.
 
