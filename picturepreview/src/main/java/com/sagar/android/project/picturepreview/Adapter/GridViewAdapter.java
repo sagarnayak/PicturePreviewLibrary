@@ -1,7 +1,10 @@
 package com.sagar.android.project.picturepreview.Adapter;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -9,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sagar.android.project.picturepreview.FullViewPicture;
+import com.sagar.android.project.picturepreview.PicPreview;
 import com.sagar.android.project.picturepreview.R;
 import com.sagar.android.project.picturepreview.pojo.AdapterDataPojo;
 import com.squareup.picasso.Callback;
@@ -68,7 +71,9 @@ public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHo
             appCompatImageViewPicture.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    context.startActivity(new Intent(context, FullViewPicture.class));
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context, appCompatImageViewPicture, ViewCompat.getTransitionName(appCompatImageViewPicture));
+                    Intent intent = new Intent(context, PicPreview.class).putExtra(PicPreview.PICTURE_URL_TO_SHOW, adapterDataPojoArrayList.get(getAdapterPosition()).getUrl());
+                    context.startActivity(intent, options.toBundle());
                 }
             });
         }

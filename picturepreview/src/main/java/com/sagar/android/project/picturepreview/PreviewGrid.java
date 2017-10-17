@@ -35,6 +35,16 @@ public class PreviewGrid extends AppCompatActivity {
         adapterDataPojos.add(new AdapterDataPojo("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg"));
         adapterDataPojos.add(new AdapterDataPojo("https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/15_surprisingly_healthy_foods_slideshow/493ss_thinkstock_rf_spaghetti_with_tomatoes_on_plate.jpg"));
         adapterDataPojos.add(new AdapterDataPojo("https://www.bodybuilding.com/fun/images/2014/in-defense-of-processed-foods-graphics-1.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://www.bodybuilding.com/fun/images/2014/in-defense-of-processed-foods-graphics-1.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://www.bodybuilding.com/fun/images/2014/in-defense-of-processed-foods-graphics-1.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://www.bodybuilding.com/fun/images/2014/in-defense-of-processed-foods-graphics-1.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://www.bodybuilding.com/fun/images/2014/in-defense-of-processed-foods-graphics-1.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://www.bodybuilding.com/fun/images/2014/in-defense-of-processed-foods-graphics-1.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://www.bodybuilding.com/fun/images/2014/in-defense-of-processed-foods-graphics-1.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://www.bodybuilding.com/fun/images/2014/in-defense-of-processed-foods-graphics-1.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg"));
 
         int spanCount = 2;
         int spacing = 30;

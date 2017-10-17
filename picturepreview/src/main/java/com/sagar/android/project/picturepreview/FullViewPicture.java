@@ -22,11 +22,10 @@ public class FullViewPicture extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_view_picture);
-
         appCompatImageViewFullView = (AppCompatImageView) findViewById(R.id.appcompatimageview_full_view);
         appCompatImageViewFullViewTwo = (AppCompatImageView) findViewById(R.id.appcompatimageview_full_view_two);
 
-        appCompatImageViewFullView.setOnClickListener(new View.OnClickListener() {
+        /*appCompatImageViewFullView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final float centerX = appCompatImageViewFullView.getWidth() / 2.0f;
@@ -41,7 +40,7 @@ public class FullViewPicture extends AppCompatActivity {
                 rotation.setAnimationListener(startNext);
                 appCompatImageViewFullView.startAnimation(rotation);
             }
-        });
+        });*/
     }
 
     private class StartNextRotate implements Animation.AnimationListener {

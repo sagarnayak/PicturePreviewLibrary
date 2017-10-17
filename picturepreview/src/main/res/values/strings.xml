@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">PicturePreview</string>
     <string name="title_activity_full_view_picture">FullViewPicture</string>
+    <string name="transition_name">transition_picture</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main2_activityy">Main2Activityy</string>
+    <string name="title_activity_pic_preview">PicPreview</string>
 </resources>

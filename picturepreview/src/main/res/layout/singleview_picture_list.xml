@@ -8,8 +8,11 @@
         android:id="@+id/appcompatimageview_preview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="3.5:4.5"
+        android:background="@android:color/white"
         android:clipToPadding="false"
+        android:padding="8dp"
+        android:transitionName="@string/transition_name"
+        app:layout_constraintDimensionRatio="3.5:4.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
