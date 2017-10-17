@@ -18,7 +18,7 @@ To add this to your project follow the steps below.
 2. In app level gradle
 
        dependencies {
-		com.github.sagarnayak:PicturePreviewLibrary:1.0
+		compile 'com.github.sagarnayak:PicturePreviewLibrary:1.0'
 	}
 	
 3. After adding all this dependency to your project call initialise the library. you can provide 4 parameters to the library.
