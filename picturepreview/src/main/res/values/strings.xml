@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PicturePreview</string>
+    <string name="title_activity_full_view_picture">FullViewPicture</string>
 </resources>

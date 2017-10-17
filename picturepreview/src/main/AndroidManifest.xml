@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sagar.android.project.picturepreview">
+          package="com.sagar.android.project.picturepreview">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -8,7 +10,12 @@
         android:supportsRtl="true">
         <activity
             android:name=".PreviewGrid"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".FullViewPicture"
+            android:label="@string/title_activity_full_view_picture"
+            android:theme="@style/AppTheme.transparent">
+        </activity>
     </application>
 
 </manifest>

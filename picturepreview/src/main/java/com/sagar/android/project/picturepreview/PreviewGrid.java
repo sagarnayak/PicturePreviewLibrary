@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.sagar.android.project.picturepreview.Adapter.GridViewAdapter;
 import com.sagar.android.project.picturepreview.pojo.AdapterDataPojo;
+import com.sagar.android.project.picturepreview.util.GridSpacingItemDecoration;
 
 import java.util.ArrayList;
 
@@ -30,9 +31,15 @@ public class PreviewGrid extends AppCompatActivity {
         recyclerViewPictures.setLayoutManager(new GridLayoutManager(PreviewGrid.this, 2));
 
         ArrayList<AdapterDataPojo> adapterDataPojos = new ArrayList<>();
-        adapterDataPojos.add(new AdapterDataPojo("https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwjT_PSIgvbWAhUHsI8KHdfGCtIQjRwIBw&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fabstract%2F&psig=AOvVaw3nEUf42eQCygCcumDeM66n&ust=1508273305138045"));
-        adapterDataPojos.add(new AdapterDataPojo("https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2016%2F06%2F28%2F05%2F39%2Fabstract-1484017_960_720.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fen%2Fabstract-border-colorful-strips-1484017%2F&docid=OzXxD0M4iucC5M&tbnid=RMrXvAEabRL-fM%3A&vet=10ahUKEwia74CCgvbWAhUMpo8KHSEPDmcQMwj2ASgGMAY..i&w=960&h=640&bih=700&biw=1366&q=abstract&ved=0ahUKEwia74CCgvbWAhUMpo8KHSEPDmcQMwj2ASgGMAY&iact=mrc&uact=8"));
-        adapterDataPojos.add(new AdapterDataPojo("https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fd2v9y0dukr6mq2.cloudfront.net%2Fvideo%2Fthumbnail%2Fabstract-rainbow-bubbles_wjwvrlweh__F0000.png&imgrefurl=https%3A%2F%2Fwww.videoblocks.com%2Fvideos%2Fmotion-backgrounds%2Fabstract&docid=9e2DcjcQ3H6c8M&tbnid=-wph0cBoGxpAqM%3A&vet=10ahUKEwia74CCgvbWAhUMpo8KHSEPDmcQMwj0ASgEMAQ..i&w=1920&h=1080&bih=700&biw=1366&q=abstract&ved=0ahUKEwia74CCgvbWAhUMpo8KHSEPDmcQMwj0ASgEMAQ&iact=mrc&uact=8"));
+
+        adapterDataPojos.add(new AdapterDataPojo("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/15_surprisingly_healthy_foods_slideshow/493ss_thinkstock_rf_spaghetti_with_tomatoes_on_plate.jpg"));
+        adapterDataPojos.add(new AdapterDataPojo("https://www.bodybuilding.com/fun/images/2014/in-defense-of-processed-foods-graphics-1.jpg"));
+
+        int spanCount = 2;
+        int spacing = 30;
+        boolean includeEdge = true;
+        recyclerViewPictures.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
 
         recyclerViewPictures.setAdapter(new GridViewAdapter(adapterDataPojos, PreviewGrid.this));
     }
