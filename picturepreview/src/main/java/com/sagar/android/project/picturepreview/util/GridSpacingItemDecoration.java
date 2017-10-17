@@ -5,7 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * Created by sagar on 10/17/2017.
+ * Created by SAGAR KUMAR NAYAK on 10/17/2017.
+ * this is the item decoration for equal spacing in the gridview items.
+ * use it for decoration in the recycler view.
  */
 public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
 

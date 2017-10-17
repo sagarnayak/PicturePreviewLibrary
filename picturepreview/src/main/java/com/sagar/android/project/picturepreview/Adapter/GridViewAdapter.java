@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,10 +19,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-import static android.content.ContentValues.TAG;
-
 /**
- * Created by SAGAR on 10/17/2017.
+ * Created by SAGAR KUMAR NAYAK on 10/17/2017.
+ * this is the adapter for binding the data to the gridview in the picture screen.
  */
 public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHolderGridView> {
     private ArrayList<AdapterDataPojo> adapterDataPojoArrayList;
@@ -41,17 +39,25 @@ public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(final ViewHolderGridView holder, int position) {
-        Picasso.with(context).load(adapterDataPojoArrayList.get(position).getUrl()).fit().centerCrop().error(R.drawable.picture_place_holder).into(holder.appCompatImageViewPicture, new Callback() {
-            @Override
-            public void onSuccess() {
-                Log.i(TAG, "onSuccess: ");
-            }
+        /*
+        load the picture to imageview
+         */
+        Picasso.with(context)
+                .load(adapterDataPojoArrayList.get(position).getUrl())
+                .fit().centerCrop()
+                .error(R.drawable.picture_place_holder)
+                .into(holder.appCompatImageViewPicture,
+                        new Callback() {
+                            @Override
+                            public void onSuccess() {
+                                //success
+                            }
 
-            @Override
-            public void onError() {
-                Log.i(TAG, "onError: ");
-            }
-        });
+                            @Override
+                            public void onError() {
+                                //failed
+                            }
+                        });
     }
 
     @Override
@@ -63,16 +69,30 @@ public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHo
 
         private AppCompatImageView appCompatImageViewPicture;
 
-        public ViewHolderGridView(View itemView) {
+        ViewHolderGridView(View itemView) {
             super(itemView);
 
             appCompatImageViewPicture = itemView.findViewById(R.id.appcompatimageview_preview);
 
+            /*
+            on click listener for the imageview.
+            after clicking the imageview the full view for the image will open in the PicPreview
+            activity.
+            also the image url and text to display at the back are sent as extra params to be used
+            at the PicPreview activity.
+             */
             appCompatImageViewPicture.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context, appCompatImageViewPicture, ViewCompat.getTransitionName(appCompatImageViewPicture));
-                    Intent intent = new Intent(context, PicPreview.class).putExtra(PicPreview.PICTURE_URL_TO_SHOW, adapterDataPojoArrayList.get(getAdapterPosition()).getUrl());
+                    ActivityOptions options =
+                            ActivityOptions.makeSceneTransitionAnimation((Activity) context,
+                                    appCompatImageViewPicture,
+                                    ViewCompat.getTransitionName(appCompatImageViewPicture));
+                    Intent intent = new Intent(context, PicPreview.class)
+                            .putExtra(PicPreview.PICTURE_URL_TO_SHOW,
+                                    adapterDataPojoArrayList.get(getAdapterPosition()).getUrl())
+                            .putExtra(PicPreview.TEXT_TO_SHOW,
+                                    adapterDataPojoArrayList.get(getAdapterPosition()).getDetails());
                     context.startActivity(intent, options.toBundle());
                 }
             });

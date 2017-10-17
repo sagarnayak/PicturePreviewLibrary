@@ -12,16 +12,6 @@
             android:name=".PreviewGrid"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".FullViewPicture"
-            android:label="@string/title_activity_full_view_picture"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".Main2Activityy"
-            android:label="@string/title_activity_main2_activityy"
-            android:theme="@style/AppTheme.transparent">
-        </activity>
-        <activity
             android:name=".PicPreview"
             android:label="@string/title_activity_pic_preview"
             android:theme="@style/AppTheme.transparent">
