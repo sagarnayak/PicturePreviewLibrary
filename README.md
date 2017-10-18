@@ -2,6 +2,9 @@
 library for viewing your list of pictures in a beautiful and fluid UI without doing much work.
 
 ![Alt text](/Screenshots/Screenshot_1.png?raw=true "screenshot one")
+![Alt text](/Screenshots/Screenshot_2.png?raw=true "screenshot two")
+![Alt text](/Screenshots/Screenshot_3.png?raw=true "screenshot three")
+![Alt text](/Screenshots/Screenshot_4.png?raw=true "screenshot four")
 
 min sdk version - 21
 compile sdk version - 26
