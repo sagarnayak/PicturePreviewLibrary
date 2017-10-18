@@ -1,6 +1,8 @@
 # PicturePreviewLibrary
 library for viewing your list of pictures in a beautiful and fluid UI without doing much work.
 
+![Alt text](/Screenshots/Screenshot_1.png?raw=true "screenshot one")
+
 min sdk version - 21
 compile sdk version - 26
 
